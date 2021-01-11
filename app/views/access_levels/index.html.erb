@@ -1,29 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Access Levels</h1>
+<section class="outstanding-invoices">
+  <h6>Bids</h6>
+  <ul>
+    <li>
+      <p class="heading">Name</p>
+    </li>
+    <li>
+      <p class="heading">Description</p>
+    </li>
+    <li>
+      <p class="heading">View</p>
+    </li>
+  </ul>
+  <% @access_levels.each do |access_level| %>
+    <ul class="ul-lines" key={access_level.access_level_id}>
+      <li><%= access_level.name %></li>
+      <li><%= access_level.description %></li>
+      <li><%= link_to 'Edit', edit_access_level_path(access_level) %></li>
+    </ul>
+  <% end %>
+</section>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<%#= link_to 'New Access Level', new_access_level_path %>
 
-  <tbody>
-    <% @access_levels.each do |access_level| %>
-      <tr>
-        <td><%= access_level.name %></td>
-        <td><%= access_level.description %></td>
-        <td><%= link_to 'Show', access_level %></td>
-        <td><%= link_to 'Edit', edit_access_level_path(access_level) %></td>
-        <td><%= link_to 'Destroy', access_level, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
-
-<%= link_to 'New Access Level', new_access_level_path %>
