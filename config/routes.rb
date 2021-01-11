@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :vehicles
   resources :expense_categories
   resources :company_categories
   resources :access_levels

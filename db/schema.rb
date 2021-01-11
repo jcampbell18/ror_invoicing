@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_11_162104) do
+ActiveRecord::Schema.define(version: 2021_01_11_162140) do
 
   create_table "access_levels", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", limit: 50
@@ -41,6 +41,17 @@ ActiveRecord::Schema.define(version: 2021_01_11_162104) do
   create_table "states", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", limit: 75
     t.string "abbreviation", limit: 4
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "vehicles", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.date "man_year"
+    t.string "make", limit: 50
+    t.string "model", limit: 50
+    t.string "submodel", limit: 50
+    t.string "engine", limit: 50
+    t.string "notes", limit: 150
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
