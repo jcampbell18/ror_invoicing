@@ -112,6 +112,7 @@
     - created folder `icons`
         - add favicons
     - add images
+        - Reference: [Icons made by Becris](https://www.flaticon.com/authors/becris)
     
 - edit file: `app/view/layouts/application.html.erb`
     - update title
