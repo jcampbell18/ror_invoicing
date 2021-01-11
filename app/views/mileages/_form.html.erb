@@ -1,0 +1,57 @@
+<%= form_with(model: mileage) do |form| %>
+  <% if mileage.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mileage.errors.count, "error") %> prohibited this mileage from being saved:</h2>
+
+      <ul>
+        <% mileage.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :project_site_id %>
+    <%= form.text_field :project_site_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vehicle_id %>
+    <%= form.text_field :vehicle_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :invoice_id %>
+    <%= form.text_field :invoice_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :drive_date %>
+    <%= form.date_select :drive_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_mileage %>
+    <%= form.text_field :start_mileage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_mileage %>
+    <%= form.text_field :end_mileage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :subtotal %>
+    <%= form.text_field :subtotal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :notes %>
+    <%= form.text_field :notes %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

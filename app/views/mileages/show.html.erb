@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Project site:</strong>
+  <%= @mileage.project_site_id %>
+</p>
+
+<p>
+  <strong>Vehicle:</strong>
+  <%= @mileage.vehicle_id %>
+</p>
+
+<p>
+  <strong>Invoice:</strong>
+  <%= @mileage.invoice_id %>
+</p>
+
+<p>
+  <strong>Drive date:</strong>
+  <%= @mileage.drive_date %>
+</p>
+
+<p>
+  <strong>Start mileage:</strong>
+  <%= @mileage.start_mileage %>
+</p>
+
+<p>
+  <strong>End mileage:</strong>
+  <%= @mileage.end_mileage %>
+</p>
+
+<p>
+  <strong>Subtotal:</strong>
+  <%= @mileage.subtotal %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @mileage.notes %>
+</p>
+
+<%= link_to 'Edit', edit_mileage_path(@mileage) %> |
+<%= link_to 'Back', mileages_path %>

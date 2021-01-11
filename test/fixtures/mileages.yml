@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_site: one
+  vehicle: one
+  invoice: one
+  drive_date: 2021-01-11
+  start_mileage: 9.99
+  end_mileage: 9.99
+  subtotal: 9.99
+  notes: MyString
+
+two:
+  project_site: two
+  vehicle: two
+  invoice: two
+  drive_date: 2021-01-11
+  start_mileage: 9.99
+  end_mileage: 9.99
+  subtotal: 9.99
+  notes: MyString

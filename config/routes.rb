@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :mileages
   resources :users
   resources :bids
   resources :companies

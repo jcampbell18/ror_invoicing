@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Mileages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Project site</th>
+      <th>Vehicle</th>
+      <th>Invoice</th>
+      <th>Drive date</th>
+      <th>Start mileage</th>
+      <th>End mileage</th>
+      <th>Subtotal</th>
+      <th>Notes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mileages.each do |mileage| %>
+      <tr>
+        <td><%= mileage.project_site_id %></td>
+        <td><%= mileage.vehicle_id %></td>
+        <td><%= mileage.invoice_id %></td>
+        <td><%= mileage.drive_date %></td>
+        <td><%= mileage.start_mileage %></td>
+        <td><%= mileage.end_mileage %></td>
+        <td><%= mileage.subtotal %></td>
+        <td><%= mileage.notes %></td>
+        <td><%= link_to 'Show', mileage %></td>
+        <td><%= link_to 'Edit', edit_mileage_path(mileage) %></td>
+        <td><%= link_to 'Destroy', mileage, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mileage', new_mileage_path %>
