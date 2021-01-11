@@ -1,0 +1,124 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @invoice.company_id %>
+</p>
+
+<p>
+  <strong>Project site:</strong>
+  <%= @invoice.project_site_id %>
+</p>
+
+<p>
+  <strong>Sku:</strong>
+  <%= @invoice.sku_id %>
+</p>
+
+<p>
+  <strong>Bid:</strong>
+  <%= @invoice.bid_id %>
+</p>
+
+<p>
+  <strong>Term:</strong>
+  <%= @invoice.term_id %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @invoice.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @invoice.end_date %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @invoice.description %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @invoice.amount %>
+</p>
+
+<p>
+  <strong>Receipts:</strong>
+  <%= @invoice.receipts %>
+</p>
+
+<p>
+  <strong>Images:</strong>
+  <%= @invoice.images %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @invoice.image_id %>
+</p>
+
+<p>
+  <strong>Mileage:</strong>
+  <%= @invoice.mileage_id %>
+</p>
+
+<p>
+  <strong>Loan amount:</strong>
+  <%= @invoice.loan_amount %>
+</p>
+
+<p>
+  <strong>Loan paid:</strong>
+  <%= @invoice.loan_paid %>
+</p>
+
+<p>
+  <strong>Interest amount:</strong>
+  <%= @invoice.interest_amount %>
+</p>
+
+<p>
+  <strong>Interest paid:</strong>
+  <%= @invoice.interest_paid %>
+</p>
+
+<p>
+  <strong>Complete:</strong>
+  <%= @invoice.complete %>
+</p>
+
+<p>
+  <strong>Paid:</strong>
+  <%= @invoice.paid %>
+</p>
+
+<p>
+  <strong>Paid checknum:</strong>
+  <%= @invoice.paid_checknum %>
+</p>
+
+<p>
+  <strong>Paid date:</strong>
+  <%= @invoice.paid_date %>
+</p>
+
+<p>
+  <strong>Project cost:</strong>
+  <%= @invoice.project_cost %>
+</p>
+
+<p>
+  <strong>Save tax:</strong>
+  <%= @invoice.save_tax %>
+</p>
+
+<p>
+  <strong>Actual net:</strong>
+  <%= @invoice.actual_net %>
+</p>
+
+<%= link_to 'Edit', edit_invoice_path(@invoice) %> |
+<%= link_to 'Back', invoices_path %>

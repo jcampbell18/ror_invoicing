@@ -1,0 +1,137 @@
+<%= form_with(model: invoice) do |form| %>
+  <% if invoice.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(invoice.errors.count, "error") %> prohibited this invoice from being saved:</h2>
+
+      <ul>
+        <% invoice.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :company_id %>
+    <%= form.text_field :company_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :project_site_id %>
+    <%= form.text_field :project_site_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sku_id %>
+    <%= form.text_field :sku_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bid_id %>
+    <%= form.text_field :bid_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :term_id %>
+    <%= form.text_field :term_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_date %>
+    <%= form.date_select :start_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_date %>
+    <%= form.date_select :end_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount %>
+    <%= form.text_field :amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :receipts %>
+    <%= form.number_field :receipts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :images %>
+    <%= form.number_field :images %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_id %>
+    <%= form.text_field :image_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mileage_id %>
+    <%= form.text_field :mileage_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :loan_amount %>
+    <%= form.text_field :loan_amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :loan_paid %>
+    <%= form.number_field :loan_paid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :interest_amount %>
+    <%= form.text_field :interest_amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :interest_paid %>
+    <%= form.number_field :interest_paid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :complete %>
+    <%= form.number_field :complete %>
+  </div>
+
+  <div class="field">
+    <%= form.label :paid %>
+    <%= form.number_field :paid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :paid_checknum %>
+    <%= form.text_field :paid_checknum %>
+  </div>
+
+  <div class="field">
+    <%= form.label :paid_date %>
+    <%= form.date_select :paid_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :project_cost %>
+    <%= form.text_field :project_cost %>
+  </div>
+
+  <div class="field">
+    <%= form.label :save_tax %>
+    <%= form.text_field :save_tax %>
+  </div>
+
+  <div class="field">
+    <%= form.label :actual_net %>
+    <%= form.text_field :actual_net %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

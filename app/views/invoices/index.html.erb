@@ -1,0 +1,73 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Invoices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company</th>
+      <th>Project site</th>
+      <th>Sku</th>
+      <th>Bid</th>
+      <th>Term</th>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>Description</th>
+      <th>Amount</th>
+      <th>Receipts</th>
+      <th>Images</th>
+      <th>Image</th>
+      <th>Mileage</th>
+      <th>Loan amount</th>
+      <th>Loan paid</th>
+      <th>Interest amount</th>
+      <th>Interest paid</th>
+      <th>Complete</th>
+      <th>Paid</th>
+      <th>Paid checknum</th>
+      <th>Paid date</th>
+      <th>Project cost</th>
+      <th>Save tax</th>
+      <th>Actual net</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @invoices.each do |invoice| %>
+      <tr>
+        <td><%= invoice.company_id %></td>
+        <td><%= invoice.project_site_id %></td>
+        <td><%= invoice.sku_id %></td>
+        <td><%= invoice.bid_id %></td>
+        <td><%= invoice.term_id %></td>
+        <td><%= invoice.start_date %></td>
+        <td><%= invoice.end_date %></td>
+        <td><%= invoice.description %></td>
+        <td><%= invoice.amount %></td>
+        <td><%= invoice.receipts %></td>
+        <td><%= invoice.images %></td>
+        <td><%= invoice.image_id %></td>
+        <td><%= invoice.mileage_id %></td>
+        <td><%= invoice.loan_amount %></td>
+        <td><%= invoice.loan_paid %></td>
+        <td><%= invoice.interest_amount %></td>
+        <td><%= invoice.interest_paid %></td>
+        <td><%= invoice.complete %></td>
+        <td><%= invoice.paid %></td>
+        <td><%= invoice.paid_checknum %></td>
+        <td><%= invoice.paid_date %></td>
+        <td><%= invoice.project_cost %></td>
+        <td><%= invoice.save_tax %></td>
+        <td><%= invoice.actual_net %></td>
+        <td><%= link_to 'Show', invoice %></td>
+        <td><%= link_to 'Edit', edit_invoice_path(invoice) %></td>
+        <td><%= link_to 'Destroy', invoice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Invoice', new_invoice_path %>
