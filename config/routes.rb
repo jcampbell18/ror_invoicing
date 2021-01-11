@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :companies
   resources :project_sites
   resources :images
   resources :image_types
