@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :terms
   resources :skus
   resources :vehicles
   resources :expense_categories
