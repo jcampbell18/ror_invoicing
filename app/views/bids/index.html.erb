@@ -1,39 +1,45 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Bids</h1>
+<section class="outstanding-invoices">
+  <h6>Bids</h6>
+  <ul>
+    <li>
+      <p class="heading">Bid #</p>
+    </li>
+    <li>
+      <p class="heading">Date</p>
+    </li>
+    <li>
+      <p class="heading">Project Site</p>
+    </li>
+    <li>
+      <p class="heading">Work Performed</p>
+    </li>
+    <li>
+      <p class="heading">Amount</p>
+    </li>
+    <li>
+      <p class="heading">Approved?</p>
+    </li>
+    <li>
+      <p class="heading">View</p>
+    </li>
+    <li>
+      <p class="heading">Print</p>
+    </li>
+  </ul>
+  <% @bids.each do |bid| %>
+    <ul class="ul-lines" key={bid.bid_id}>
+      <li><%= bid.bid_id %></li>
+      <li><%= bid.bid_date %></li>
+      <li><%= bid.project_site_id %></li>
+      <li><%= bid.sku_id %></li>
+      <li><%= bid.amount %></li>
+      <li><%= bid.bid_status_id %></li>
+      <li><%= link_to 'Edit', edit_bid_path(bid) %></li>
+      <td><%= link_to 'Show', bid %></td>
+    </ul>
+  <% end %>
+</section>
 
-<table>
-  <thead>
-    <tr>
-      <th>Company</th>
-      <th>Project site</th>
-      <th>Sku</th>
-      <th>Bid status</th>
-      <th>Bid date</th>
-      <th>Description</th>
-      <th>Amount</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @bids.each do |bid| %>
-      <tr>
-        <td><%= bid.company_id %></td>
-        <td><%= bid.project_site_id %></td>
-        <td><%= bid.sku_id %></td>
-        <td><%= bid.bid_status_id %></td>
-        <td><%= bid.bid_date %></td>
-        <td><%= bid.description %></td>
-        <td><%= bid.amount %></td>
-        <td><%= link_to 'Show', bid %></td>
-        <td><%= link_to 'Edit', edit_bid_path(bid) %></td>
-        <td><%= link_to 'Destroy', bid, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Bid', new_bid_path %>
+<%#= link_to 'New Bid', new_bid_path %>
