@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <section class="outstanding-invoices">
-  <h6>Bids</h6>
+  <h6>User Access Levels</h6>
   <ul>
     <li>
       <p class="heading">Name</p>
@@ -14,10 +14,16 @@
     </li>
   </ul>
   <% @access_levels.each do |access_level| %>
-    <ul class="ul-lines" key={access_level.access_level_id}>
-      <li><%= access_level.name %></li>
-      <li><%= access_level.description %></li>
-      <li><%= link_to 'Edit', edit_access_level_path(access_level) %></li>
+    <ul class="ul-lines">
+      <li>
+        <p><%= access_level.name %></p>
+      </li>
+      <li>
+        <p><%= access_level.description %></p>
+      </li>
+      <li>
+        <p><%= link_to 'Edit', edit_access_level_path(access_level) %></p>
+      </li>
     </ul>
   <% end %>
 </section>
