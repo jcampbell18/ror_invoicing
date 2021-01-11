@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :image_types
   resources :terms
   resources :skus
   resources :vehicles
