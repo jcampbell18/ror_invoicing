@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_11_162633) do
+ActiveRecord::Schema.define(version: 2021_01_11_163008) do
 
   create_table "access_levels", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", limit: 50
@@ -123,6 +123,21 @@ ActiveRecord::Schema.define(version: 2021_01_11_162633) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "username", limit: 50
+    t.string "password", limit: 250
+    t.bigint "access_level_id", null: false
+    t.bigint "company_id", null: false
+    t.string "name", limit: 50
+    t.string "phone", limit: 14
+    t.string "phone_ext", limit: 6
+    t.string "email", limit: 100
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["access_level_id"], name: "index_users_on_access_level_id"
+    t.index ["company_id"], name: "index_users_on_company_id"
+  end
+
   create_table "vehicles", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.date "man_year"
     t.string "make", limit: 50
@@ -143,4 +158,6 @@ ActiveRecord::Schema.define(version: 2021_01_11_162633) do
   add_foreign_key "companies", "states"
   add_foreign_key "images", "image_types"
   add_foreign_key "project_sites", "states"
+  add_foreign_key "users", "access_levels"
+  add_foreign_key "users", "companies"
 end
