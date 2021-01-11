@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_11_162341) do
+ActiveRecord::Schema.define(version: 2021_01_11_162407) do
 
   create_table "access_levels", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", limit: 50
@@ -54,6 +54,18 @@ ActiveRecord::Schema.define(version: 2021_01_11_162341) do
     t.index ["image_type_id"], name: "index_images_on_image_type_id"
   end
 
+  create_table "project_sites", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "address", limit: 100
+    t.string "city", limit: 50
+    t.bigint "state_id", null: false
+    t.string "zipcode", limit: 6
+    t.string "access_code", limit: 10
+    t.text "map_link"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["state_id"], name: "index_project_sites_on_state_id"
+  end
+
   create_table "skus", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", limit: 50
     t.string "description", limit: 250
@@ -86,4 +98,5 @@ ActiveRecord::Schema.define(version: 2021_01_11_162341) do
   end
 
   add_foreign_key "images", "image_types"
+  add_foreign_key "project_sites", "states"
 end

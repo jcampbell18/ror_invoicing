@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @project_site.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @project_site.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @project_site.state_id %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @project_site.zipcode %>
+</p>
+
+<p>
+  <strong>Access code:</strong>
+  <%= @project_site.access_code %>
+</p>
+
+<p>
+  <strong>Map link:</strong>
+  <%= @project_site.map_link %>
+</p>
+
+<%= link_to 'Edit', edit_project_site_path(@project_site) %> |
+<%= link_to 'Back', project_sites_path %>

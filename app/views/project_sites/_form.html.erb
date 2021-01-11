@@ -1,0 +1,47 @@
+<%= form_with(model: project_site) do |form| %>
+  <% if project_site.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(project_site.errors.count, "error") %> prohibited this project_site from being saved:</h2>
+
+      <ul>
+        <% project_site.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state_id %>
+    <%= form.text_field :state_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zipcode %>
+    <%= form.text_field :zipcode %>
+  </div>
+
+  <div class="field">
+    <%= form.label :access_code %>
+    <%= form.text_field :access_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :map_link %>
+    <%= form.text_area :map_link %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
