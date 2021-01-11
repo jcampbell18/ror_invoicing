@@ -24,10 +24,11 @@
     - ![screenshot](https://github.com/jcampbell18/ror_invoicing/blob/master/Screenshot%202021-01-11%20074541.png)
     - ![screenshot](https://github.com/jcampbell18/ror_invoicing/blob/master/Screenshot%202021-01-11%20074601.png)
     
-- update/install gems (unable to automatically run because of Windows system)
-    - `bundle install`
-    - `rails webpacker:install`
-    - `rails webpacker:install:vue`
+- update/install (type in terminal) 
+    - gems unable to automatically run because of Windows/WSL2 system
+        - `bundle install`
+        - `rails webpacker:install`
+        - `rails webpacker:install:vue`
     - ![screenshot](https://github.com/jcampbell18/ror_invoicing/blob/master/Screenshot%202021-01-11%20084941.png)
   
 - edit file: `config/database.yml`
