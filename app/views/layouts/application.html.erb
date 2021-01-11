@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RorInvoicing</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- Page Title -->
+    <title>DocJas.com</title>
+
+    <!-- Metadata -->
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="author" content="Jason Campbell"/>
+    <meta name="description" content="DocJas | www.docjas.com | repair &amp; renovation" />
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="<%= asset_path('images/favicons/apple-touch-icon.png') %>"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="<%= asset_path('images/favicons/favicon-32x32.png') %>"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="<%= asset_path('images/favicons/favicon-16x16.png') %>"/>
+    <link rel="manifest" href="<%= asset_path('images/favicons/site.webmanifest') %>"/>
+    <meta name="msapplication-TileColor" content="#2b5797"/>
+    <meta name="theme-color" content="#ffffff"/>
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'normalize', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <%= stylesheet_link_tag 'styles', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
