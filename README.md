@@ -105,6 +105,7 @@
     - add styles.css
     - add normalize.css
         - Reference: [https://necolas.github.io/normalize.css/](https://necolas.github.io/normalize.css/)
+    
 - folder: `app/assets/images`
     - created folder `favicons`
         - add favicons
@@ -112,9 +113,11 @@
         - add favicons
     - add images
     
-application.html.erb
-add meta tags
-
+- edit file: `app/view/layouts/application.html.erb`
+    - update title
+    - add meta tags
+    - add favicons
+    - add stylesheets
 
 vue
 `yarn global add @vue/cli`
