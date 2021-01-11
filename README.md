@@ -99,10 +99,22 @@
         - `rails g scaffold Expenses invoice:references company:references expense_category:references vehicle:references pdate:date name:string{250} quantity:integer{4} amount:decimal{'8,2'} subtotal:decimal{'8,2'} tax_include:integer{1} tax:decimal{'8,5'} total:decimal{'8,2'} receipt_reference:string{100} image:references`
         - `rails db:migrate`
 
+#### Stylesheets and Icons
+
+- folder: `app/assets/stylesheets`
+    - add styles.css
+    - add normalize.css
+        - Reference: [https://necolas.github.io/normalize.css/](https://necolas.github.io/normalize.css/)
+- folder: `app/assets/images`
+    - created folder `favicons`
+        - add favicons
+    - created folder `icons`
+        - add favicons
+    - add images
+    
 application.html.erb
 add meta tags
-add normalize.css
-add favicons
+
 
 vue
 `yarn global add @vue/cli`
