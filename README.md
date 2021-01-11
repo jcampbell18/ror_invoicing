@@ -5,10 +5,13 @@
 ### System
 
 - [x] Windows 10 OS
-    - [x] WSL2 Ubuntu 2
+    - [x] Windows Subsystem Linux (WSL2) Ubuntu 20.04
+    
+### IDE
+
 - [x] JetBrain's RubyMine v2020.3.1
 
-### Software
+### Project
 
 - [x] Ruby v2.7.2
 - [x] Rails v6.1.1
