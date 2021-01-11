@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @bid.company_id %>
+</p>
+
+<p>
+  <strong>Project site:</strong>
+  <%= @bid.project_site_id %>
+</p>
+
+<p>
+  <strong>Sku:</strong>
+  <%= @bid.sku_id %>
+</p>
+
+<p>
+  <strong>Bid status:</strong>
+  <%= @bid.bid_status_id %>
+</p>
+
+<p>
+  <strong>Bid date:</strong>
+  <%= @bid.bid_date %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @bid.description %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @bid.amount %>
+</p>
+
+<%= link_to 'Edit', edit_bid_path(@bid) %> |
+<%= link_to 'Back', bids_path %>
