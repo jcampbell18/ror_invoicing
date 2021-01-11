@@ -119,7 +119,10 @@
     - add favicons
     - add stylesheets
 
-vue
+### Frontend
+
+#### VueJS
+
 `yarn global add @vue/cli`
 `yarn global add @vue/cli-init`
 `vue init webpack invoicing_frontend`
