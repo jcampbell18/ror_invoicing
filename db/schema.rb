@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_11_162440) do
+ActiveRecord::Schema.define(version: 2021_01_11_162633) do
 
   create_table "access_levels", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", limit: 50
@@ -23,6 +23,22 @@ ActiveRecord::Schema.define(version: 2021_01_11_162440) do
     t.string "name", limit: 20
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "bids", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "company_id", null: false
+    t.bigint "project_site_id", null: false
+    t.bigint "sku_id", null: false
+    t.bigint "bid_status_id", null: false
+    t.date "bid_date"
+    t.text "description"
+    t.decimal "amount", precision: 6, scale: 2
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["bid_status_id"], name: "index_bids_on_bid_status_id"
+    t.index ["company_id"], name: "index_bids_on_company_id"
+    t.index ["project_site_id"], name: "index_bids_on_project_site_id"
+    t.index ["sku_id"], name: "index_bids_on_sku_id"
   end
 
   create_table "companies", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -118,6 +134,10 @@ ActiveRecord::Schema.define(version: 2021_01_11_162440) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "bids", "bid_statuses"
+  add_foreign_key "bids", "companies"
+  add_foreign_key "bids", "project_sites"
+  add_foreign_key "bids", "skus"
   add_foreign_key "companies", "company_categories"
   add_foreign_key "companies", "images"
   add_foreign_key "companies", "states"
