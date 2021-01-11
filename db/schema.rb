@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_11_162317) do
+ActiveRecord::Schema.define(version: 2021_01_11_162341) do
 
   create_table "access_levels", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", limit: 50
@@ -44,6 +44,16 @@ ActiveRecord::Schema.define(version: 2021_01_11_162317) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "images", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "image_type_id", null: false
+    t.string "filename", limit: 250
+    t.string "title", limit: 75
+    t.text "file_path"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["image_type_id"], name: "index_images_on_image_type_id"
+  end
+
   create_table "skus", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", limit: 50
     t.string "description", limit: 250
@@ -75,4 +85,5 @@ ActiveRecord::Schema.define(version: 2021_01_11_162317) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "images", "image_types"
 end
