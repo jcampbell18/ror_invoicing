@@ -29,15 +29,31 @@
     </li>
   </ul>
   <% @bids.each do |bid| %>
-    <ul class="ul-lines" key={bid.bid_id}>
-      <li><%= bid.bid_id %></li>
-      <li><%= bid.bid_date %></li>
-      <li><%= bid.project_site_id %></li>
-      <li><%= bid.sku_id %></li>
-      <li><%= bid.amount %></li>
-      <li><%= bid.bid_status_id %></li>
-      <li><%= link_to 'Edit', edit_bid_path(bid) %></li>
-      <li><%= link_to 'Show', bid %></li>
+    <ul class="ul-lines">
+      <li>
+        <p><%= bid.bid_id %></p>
+      </li>
+      <li>
+        <p><%= bid.bid_date %></p>
+      </li>
+      <li>
+        <p><%= bid.project_site_id %></p>
+      </li>
+      <li>
+        <p><%= bid.sku_id %></p>
+      </li>
+      <li>
+        <p><%= bid.amount %></p>
+      </li>
+      <li>
+        <p><%= bid.bid_status_id %></p>
+      </li>
+      <li>
+        <p><%= link_to 'Edit', edit_bid_path(bid) %></p>
+      </li>
+      <li>
+        <p><%= link_to 'Show', bid %></p>
+      </li>
     </ul>
   <% end %>
 </section>
