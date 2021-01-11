@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Invoice:</strong>
+  <%= @expense.invoice_id %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @expense.company_id %>
+</p>
+
+<p>
+  <strong>Expense category:</strong>
+  <%= @expense.expense_category_id %>
+</p>
+
+<p>
+  <strong>Vehicle:</strong>
+  <%= @expense.vehicle_id %>
+</p>
+
+<p>
+  <strong>Pdate:</strong>
+  <%= @expense.pdate %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @expense.name %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @expense.quantity %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @expense.amount %>
+</p>
+
+<p>
+  <strong>Subtotal:</strong>
+  <%= @expense.subtotal %>
+</p>
+
+<p>
+  <strong>Tax include:</strong>
+  <%= @expense.tax_include %>
+</p>
+
+<p>
+  <strong>Tax:</strong>
+  <%= @expense.tax %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @expense.total %>
+</p>
+
+<p>
+  <strong>Receipt reference:</strong>
+  <%= @expense.receipt_reference %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @expense.image_id %>
+</p>
+
+<%= link_to 'Edit', edit_expense_path(@expense) %> |
+<%= link_to 'Back', expenses_path %>

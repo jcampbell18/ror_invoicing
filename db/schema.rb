@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_11_163802) do
+ActiveRecord::Schema.define(version: 2021_01_11_164215) do
 
   create_table "access_levels", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", limit: 50
@@ -73,6 +73,30 @@ ActiveRecord::Schema.define(version: 2021_01_11_163802) do
     t.string "description", limit: 250
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "expenses", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "invoice_id", null: false
+    t.bigint "company_id", null: false
+    t.bigint "expense_category_id", null: false
+    t.bigint "vehicle_id", null: false
+    t.date "pdate"
+    t.string "name", limit: 250
+    t.integer "quantity"
+    t.decimal "amount", precision: 8, scale: 2
+    t.decimal "subtotal", precision: 8, scale: 2
+    t.integer "tax_include", limit: 1
+    t.decimal "tax", precision: 8, scale: 5
+    t.decimal "total", precision: 8, scale: 2
+    t.string "receipt_reference", limit: 100
+    t.bigint "image_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["company_id"], name: "index_expenses_on_company_id"
+    t.index ["expense_category_id"], name: "index_expenses_on_expense_category_id"
+    t.index ["image_id"], name: "index_expenses_on_image_id"
+    t.index ["invoice_id"], name: "index_expenses_on_invoice_id"
+    t.index ["vehicle_id"], name: "index_expenses_on_vehicle_id"
   end
 
   create_table "image_types", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -206,6 +230,11 @@ ActiveRecord::Schema.define(version: 2021_01_11_163802) do
   add_foreign_key "companies", "company_categories"
   add_foreign_key "companies", "images"
   add_foreign_key "companies", "states"
+  add_foreign_key "expenses", "companies"
+  add_foreign_key "expenses", "expense_categories"
+  add_foreign_key "expenses", "images"
+  add_foreign_key "expenses", "invoices"
+  add_foreign_key "expenses", "vehicles"
   add_foreign_key "images", "image_types"
   add_foreign_key "invoices", "bids"
   add_foreign_key "invoices", "companies"
