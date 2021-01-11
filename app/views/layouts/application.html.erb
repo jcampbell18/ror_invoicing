@@ -31,6 +31,109 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div id="container">
+      <header>
+        <section class="title_area">
+          <h1>Doc<span class="orange">Jas</span>.com</h1>
+          <h4>repair &amp; renovation</h4>
+        </section>
+        <section class="login_area">
+          <h5>Welcome User!</h5>
+          <h6 class="access_level">logged in as <span class="white">accesslevel</span></h6>
+          <h6 class="timestamp orange">12:59pm 10/10/2020</h6>
+          <img src="img/jcampbell.jpg" alt="Jason Campbell" title="Jason Campbell"/>
+        </section>
+        <nav>
+          <ol>
+            <li>
+              <a href="">
+                <img src="img/icons/512x512/dashboard.png" alt="Dashboard" title="Dashboard"/>
+                <h6>Dashboard</h6>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="img/icons/512x512/content.png" alt="Content" title="Content"/>
+                <h6>Content</h6>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="img/icons/512x512/user.png" alt="Users" title="Users"/>
+                <h6>Users</h6>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="img/icons/512x512/settings.png" alt="Settings" title="Settings"/>
+                <h6>Settings</h6>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="img/icons/512x512/logout.png" alt="Logout" title="Logout"/>
+                <h6>Logout</h6>
+              </a>
+            </li>
+          </ol>
+        </nav>
+      </header>
+      <aside>
+        <ol>
+          <li>
+            <a href="">
+              <img src="img/icons/512x512/project_sites.png" alt="Project Sites" title="Project Sites"/>
+              <h6>Project Sites</h6>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="img/icons/512x512/invoicing.png" alt="Invoicing" title="Invoicing"/>
+              <h6>Invoicing</h6>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="img/icons/512x512/bids.png" alt="Bids" title="Bids"/>
+              <h6>Bids</h6>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="img/icons/512x512/users.png" alt="Clients" title="Clients"/>
+              <h6>Clients</h6>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="img/icons/512x512/sku.png" alt="SKU" title="SKU"/>
+              <h6>SKU</h6>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="img/icons/512x512/mileage.png" alt="Mileage" title="Mileage"/>
+              <h6>Mileage</h6>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="img/icons/512x512/terms.png" alt="Terms" title="Terms"/>
+              <h6>Terms</h6>
+            </a>
+          </li>
+        </ol>
+      </aside>
+      <main>
+        <%= yield %>
+      </main>
+      <footer>
+        <p>DocJas.com | repair & renovation | All rights reserved 2020</p>
+        <p>
+          Designed & Developed by Jason L Campbell<br />
+          Icons made by <a href="https://www.flaticon.com/authors/becris" title="Becris">Becris</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+        </p>
+      </footer>
+    </div>
   </body>
 </html>
