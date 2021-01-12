@@ -67,7 +67,7 @@ a:link,
 a:visited,
 a:hover {
     text-decoration: none;
-    color: var(--secondary-color);
+    /*color: var(--secondary-color);*/
 }
 
 
@@ -124,7 +124,8 @@ header section.title_area h1 {
 
 header section.title_area h4 {
     padding-bottom: 0.4em;
-} 
+    align-self: flex-end;
+}
 
 header section.login_area {
     align-self: center;
@@ -174,7 +175,7 @@ nav {
     width: 100%;
     background: linear-gradient(var(--secondary-color) 50%, var(--off-white) 50%);
     padding: 1em 0em;
-    
+
     display: flex;
     flex-flow: row nowrap;
     justify-items: center;
@@ -267,8 +268,6 @@ main {
     grid-template-rows: repeat(auto-fit, minmax(162px, 1fr));
     grid-template-columns: repeat(auto-fit, minmax(408px, 1fr));
     gap: 1.2em;
-    justify-items: center;
-    align-items: start;
 
     display: flex;
     flex-flow: row wrap;
@@ -293,6 +292,76 @@ main li p {
     padding: 0.4em;
 }
 
+main li input {
+    padding: 0.4em;
+}
+
+main li input[type="text"] {
+    width: 85%;
+}
+
+/*** SECTION: Add New... ***/
+main section.add-new {
+    min-width: 40%;
+    max-width: 60%;
+}
+
+main section.add-new input.small {
+    width: 30%;
+}
+
+main section.add-new ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 0.8em 0;
+}
+
+main section.add-new ul:last-child li:first-child {
+    justify-self: center;
+}
+
+main section.add-new ul li:first-child {
+    justify-self: end;
+    padding-right: 0.4em;
+}
+
+main section.add-new ul:not(last-child) li:last-child {
+    justify-self: start;
+    width: 100%;
+}
+
+main section.add-new ul li input[type='text'] {
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+}
+
+main section.add-new ul li.button-end input {
+    justify-self: end;
+}
+
+main section.add-new ul li select,
+main section.add-new ul li select option {
+    padding: 0.4em 0;
+}
+
+main section.add-new ul li input.buttons {
+    border: 2px solid var(--secondary-color);
+    border-radius: 10px;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 1.0em;
+}
+
+main section.add-new ul li input.buttons:hover {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+
+/*** SECTION: Reports ***/
+/* main section.reports */
+
 /*** SECTION: Monthly Stats ***/
 main section.monthly-stats h6 {
     grid-row: 1;
@@ -303,8 +372,9 @@ main section.monthly-stats ul {
     list-style: none;
 }
 
-main section.monthly-stats ul li:nth-child(4n-3),
-main section.monthly-stats ul li:nth-child(4n-2) {
+/* main section.monthly-stats ul li:nth-child(4n-3),
+main section.monthly-stats ul li:nth-child(4n-2) { */
+main section.monthly-stats ul:nth-child(even){
     background: var(--primary-color);
 }
 
@@ -356,6 +426,7 @@ main section.stats-current-year ul {
 
 main section.stats-current-year ul li {
     width: 100%;
+    height: 100%;
 }
 
 main section.stats-current-year ul li:nth-child(4n-3),
@@ -412,6 +483,20 @@ main section.outstanding-invoices ul li input {
     align-self: center;
 }
 
+li.one-col {
+    grid-column: 1 / span 2;
+    align-self: center;
+    text-align: center;
+}
+
+li.one-col input[type='submit'] {
+    border: 2px solid var(--secondary-color);
+    border-radius: 10px;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 1.0em;
+}
+
 /***** FOOTER *****/
 footer {
     width: 100%;
@@ -427,7 +512,7 @@ footer p {
     color: var(--tertiary-color);
     padding: 1.0em 1.0em;
 
-    
+
 }
 
 footer p:last-child {
