@@ -18,6 +18,10 @@
 - [x] MYSQL v8.0.22
 - [x] VueJS v2.6.12
 
+### Database Design
+
+![UML](https://github.com/jcampbell18/ror_invoicing/blob/master/ror_invoicing.jpg)
+
 ## Documentation
 
 ### Initialize Project
