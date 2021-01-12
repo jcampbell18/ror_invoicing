@@ -38,9 +38,9 @@
           <h4>repair &amp; renovation</h4>
         </section>
         <section class="login_area">
-          <h5>Welcome User!</h5>
-          <h6 class="access_level">logged in as <span class="white">accesslevel</span></h6>
-          <h6 class="timestamp orange">12:59pm 10/10/2020</h6>
+          <h5>Welcome Jason!</h5>
+          <h6 class="access_level">logged in as <span class="white">admin</span></h6>
+          <h6 class="timestamp orange"><%= Time.now.strftime("%I:%M %p %m/%d/%Y") %></h6>
           <img src="<%= asset_path('jcampbell.jpg') %>" alt="Jason Campbell" title="Jason Campbell"/>
         </section>
         <nav>
@@ -128,7 +128,7 @@
         <%= yield %>
       </main>
       <footer>
-        <p>DocJas.com | repair & renovation | All rights reserved 2020</p>
+        <p>DocJas.com | repair & renovation | All rights reserved <%= Time.now.strftime("%Y") %></p>
         <p>
           Designed & Developed by Jason L Campbell<br />
           Icons made by <a href="https://www.flaticon.com/authors/becris" title="Becris">Becris</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
