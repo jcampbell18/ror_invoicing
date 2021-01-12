@@ -286,6 +286,7 @@ main section {
 main section h6 {
     background: var(--secondary-color);
     color: var(--primary-color);
+    border-radius: 6px 6px 0 0;
 }
 
 main li p {
