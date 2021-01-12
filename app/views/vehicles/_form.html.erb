@@ -11,37 +11,77 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :man_year %>
-    <%= form.date_select :man_year %>
-  </div>
+  <ul>
+    <li>
+      <p class="heading">
+        <%= form.label :man_year %>
+      </p>
+    </li>
+    <li>
+      <%#= form.date_select :man_year %>
+      <%= form.select :man_year, (Time.zone.now.year - 100)..(Time.zone.now.year + 1) %>
+    </li>
+  </ul>
 
-  <div class="field">
-    <%= form.label :make %>
-    <%= form.text_field :make %>
-  </div>
+  <ul>
+    <li>
+      <p class="heading">
+        <%= form.label :make %>
+      </p>
+    </li>
+    <li>
+      <%= form.text_field :make %>
+    </li>
+  </ul>
 
-  <div class="field">
-    <%= form.label :model %>
-    <%= form.text_field :model %>
-  </div>
+  <ul>
+    <li>
+      <p class="heading">
+        <%= form.label :model %>
+      </p>
+    </li>
+    <li>
+      <%= form.text_field :model %>
+    </li>
+  </ul>
 
-  <div class="field">
-    <%= form.label :submodel %>
-    <%= form.text_field :submodel %>
-  </div>
+  <ul>
+    <li>
+      <p class="heading">
+        <%= form.label :submodel %>
+      </p>
+    </li>
+    <li>
+      <%= form.text_field :submodel %>
+    </li>
+  </ul>
 
-  <div class="field">
-    <%= form.label :engine %>
-    <%= form.text_field :engine %>
-  </div>
+  <ul>
+    <li>
+      <p class="heading">
+        <%= form.label :engine %>
+      </p>
+    </li>
+    <li>
+      <%= form.text_field :engine %>
+    </li>
+  </ul>
 
-  <div class="field">
-    <%= form.label :notes %>
-    <%= form.text_field :notes %>
-  </div>
+  <ul>
+    <li>
+      <p class="heading">
+        <%= form.label :notes %>
+      </p>
+    </li>
+    <li>
+      <%= form.text_field :notes %>
+    </li>
+  </ul>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <ul class="">
+    <li class="one-col button-end actions">
+      <%= form.submit %>
+    </li>
+  </ul>
+
 <% end %>
