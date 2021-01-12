@@ -1,29 +1,33 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Skus</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @skus.each do |sku| %>
-      <tr>
-        <td><%= sku.name %></td>
-        <td><%= sku.description %></td>
-        <td><%= link_to 'Show', sku %></td>
-        <td><%= link_to 'Edit', edit_sku_path(sku) %></td>
-        <td><%= link_to 'Destroy', sku, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
 <%= link_to 'New Sku', new_sku_path %>
+
+<section class="outstanding-invoices">
+  <h6>Skus</h6>
+  <ul>
+    <li>
+      <p class="heading">Name</p>
+    </li>
+    <li>
+      <p class="heading">Description</p>
+    </li>
+    <li>
+      <p class="heading">View</p>
+    </li>
+  </ul>
+  <% @skus.each do |sku| %>
+    <ul class="ul-lines">
+      <li>
+        <p><%= sku.name %></p>
+      </li>
+      <li>
+        <p><%= sku.description %></p>
+      </li>
+      <li>
+        <p><%= link_to 'Edit', edit_sku_path(sku) %></p>
+      </li>
+      <%#= link_to 'Show', sku %>
+      <%#= link_to 'Destroy', sku, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </ul>
+  <% end %>
+</section>
