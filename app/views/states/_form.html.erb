@@ -11,17 +11,31 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
+  <ul>
+    <li>
+      <p class="heading">
+        <%= form.label :name %>
+      </p>
+    </li>
+    <li>
+      <%= form.text_field :name %>
+    </li>
+  </ul>
 
-  <div class="field">
-    <%= form.label :abbreviation %>
-    <%= form.text_field :abbreviation %>
-  </div>
+  <ul>
+    <li>
+      <p class="heading">
+        <%= form.label :abbreviation %>
+      </p>
+    </li>
+    <li>
+      <%= form.text_field :abbreviation %>
+    </li>
+  </ul>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <ul class="">
+    <li class="one-col button-end actions">
+      <%= form.submit %>
+    </li>
+  </ul>
 <% end %>
