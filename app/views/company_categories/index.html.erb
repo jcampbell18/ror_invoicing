@@ -1,27 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Company Categories</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @company_categories.each do |company_category| %>
-      <tr>
-        <td><%= company_category.name %></td>
-        <td><%= link_to 'Show', company_category %></td>
-        <td><%= link_to 'Edit', edit_company_category_path(company_category) %></td>
-        <td><%= link_to 'Destroy', company_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
 <%= link_to 'New Company Category', new_company_category_path %>
+
+<section class="outstanding-invoices">
+  <h6>Company Categories</h6>
+  <ul>
+    <li>
+      <p class="heading">Name</p>
+    </li>
+    <li>
+      <p class="heading">View</p>
+    </li>
+  </ul>
+  <% @company_categories.each do |company_category| %>
+    <ul class="ul-lines">
+      <li>
+        <p><%= company_category.name %></p>
+      </li>
+      <li>
+        <p><%= link_to 'Edit', edit_company_category_path(company_category) %></p>
+      </li>
+      <%#= link_to 'Show', company_category %>
+      <%#= link_to 'Destroy', company_category, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </ul>
+  <% end %>
+</section>
