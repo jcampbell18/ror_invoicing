@@ -1,7 +1,7 @@
 class CreateVehicles < ActiveRecord::Migration[6.1]
   def change
     create_table :vehicles do |t|
-      t.date :man_year
+      t.bigint :man_year
       t.string :make, limit: 50
       t.string :model, limit: 50
       t.string :submodel, limit: 50

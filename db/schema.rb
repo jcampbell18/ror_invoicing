@@ -213,7 +213,7 @@ ActiveRecord::Schema.define(version: 2021_01_11_164215) do
   end
 
   create_table "vehicles", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.date "man_year"
+    t.integer "man_year"
     t.string "make", limit: 50
     t.string "model", limit: 50
     t.string "submodel", limit: 50
