@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to 'New Bid Status', new_bid_status_path %>
+
 <section class="outstanding-invoices">
   <h6>Bids</h6>
   <ul>
@@ -11,11 +13,13 @@
     </li>
   </ul>
   <% @bid_statuses.each do |bid_status| %>
-    <ul class="ul-lines" key={bid_status.bid_status_id}>
-        <li><%= bid_status.name %></li>
-        <li><%= link_to 'Edit', edit_bid_status_path(bid_status) %></li>
+    <ul class="ul-lines">
+        <li>
+          <p><%= bid_status.name %></p>
+        </li>
+        <li>
+          <p><%= link_to 'Edit', edit_bid_status_path(bid_status) %></p>
+        </li>
     </ul>
   <% end %>
 </section>
-
-<%#= link_to 'New Bid Status', new_bid_status_path %>
