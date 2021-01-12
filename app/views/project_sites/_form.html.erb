@@ -2,7 +2,6 @@
   <% if project_site.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(project_site.errors.count, "error") %> prohibited this project_site from being saved:</h2>
-
       <ul>
         <% project_site.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -11,37 +10,64 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :address %>
-    <%= form.text_field :address %>
-  </div>
+  <ul>
+    <li>
+      <p class="heading"><%= form.label :address %></p>
+    </li>
+    <li>
+      <%= form.text_field :address %>
+    </li>
+  </ul>
 
-  <div class="field">
-    <%= form.label :city %>
-    <%= form.text_field :city %>
-  </div>
+  <ul>
+    <li>
+      <p class="heading"><%= form.label :city %></p>
+    </li>
+    <li>
+      <%= form.text_field :city %>
+    </li>
+  </ul>
 
-  <div class="field">
-    <%= form.label :state_id %>
-    <%= form.text_field :state_id %>
-  </div>
+  <ul>
+    <li>
+      <p class="heading"><%= form.label :state_id %></p>
+    </li>
+    <li>
+      <%= form.text_field :state_id %>
+    </li>
+  </ul>
 
-  <div class="field">
-    <%= form.label :zipcode %>
-    <%= form.text_field :zipcode %>
-  </div>
+  <ul>
+    <li>
+      <p class="heading"><%= form.label :zipcode %></p>
+    </li>
+    <li>
+      <%= form.text_field :zipcode %>
+    </li>
+  </ul>
 
-  <div class="field">
-    <%= form.label :access_code %>
-    <%= form.text_field :access_code %>
-  </div>
+  <ul>
+    <li>
+      <p class="heading"><%= form.label :access_code %></p>
+    </li>
+    <li>
+      <%= form.text_field :access_code %>
+    </li>
+  </ul>
 
-  <div class="field">
-    <%= form.label :map_link %>
-    <%= form.text_area :map_link %>
-  </div>
+  <ul>
+    <li>
+      <p class="heading"><%= form.label :map_link %></p>
+    </li>
+    <li>
+      <%= form.text_area :map_link %>
+    </li>
+  </ul>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <ul class="">
+    <li class="one-col button-end actions">
+      <%= form.submit %>
+    </li>
+  </ul>
+
 <% end %>
