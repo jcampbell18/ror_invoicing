@@ -127,6 +127,23 @@
     - add favicons
     - add stylesheets
 
+#### Pages
+
+- edit files: `app/views/TABLE_NAME/`
+    - `_form.html.erb`
+    - `edit.html.erb`
+    - `new.html.erb`
+    - `index.html.erb`
+
+#### Insert Data
+
+- inserting data using CRUD
+- inserting data with MYSQL statements
+- edited database design, removing unneeded columns
+    - example migrations command `rails g migration RemoveImageIdFromInvoices image_id:bigint`
+        - removes existing column `image_id` from `invoices` table
+        - Reference: [RipTutorial.com](https://riptutorial.com/ruby-on-rails/example/3491/remove-an-existing-column-from-a-table)
+
 ### Frontend
 
 #### VueJS
