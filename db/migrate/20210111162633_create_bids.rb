@@ -7,7 +7,7 @@ class CreateBids < ActiveRecord::Migration[6.1]
       t.references :bid_status, null: false, foreign_key: true
       t.date :bid_date
       t.text :description
-      t.decimal :amount, precision: 6, scale: 2
+      t.decimal :amount, precision: 8, scale: 2
 
       t.timestamps
     end

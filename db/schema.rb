@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2021_01_11_164215) do
     t.bigint "bid_status_id", null: false
     t.date "bid_date"
     t.text "description"
-    t.decimal "amount", precision: 6, scale: 2
+    t.decimal "amount", precision: 8, scale: 2
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["bid_status_id"], name: "index_bids_on_bid_status_id"
