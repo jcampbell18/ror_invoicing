@@ -135,7 +135,7 @@
     - `new.html.erb`
     - `index.html.erb`
 
-#### Insert Data
+#### Populate Database
 
 - inserting data using CRUD
 - inserting data with MYSQL statements
