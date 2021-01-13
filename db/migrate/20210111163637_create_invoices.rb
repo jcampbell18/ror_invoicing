@@ -10,10 +10,6 @@ class CreateInvoices < ActiveRecord::Migration[6.1]
       t.date :end_date
       t.text :description
       t.decimal :amount, precision: 8, scale: 2
-      t.integer :receipts, limit: 1
-      t.integer :images, limit: 1
-      t.references :image, null: false, foreign_key: true
-      t.references :mileage, null: false, foreign_key: true
       t.decimal :loan_amount, precision: 8, scale: 2
       t.integer :loan_paid, limit: 1
       t.decimal :interest_amount, precision: 8, scale: 2

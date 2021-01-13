@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_11_164215) do
+ActiveRecord::Schema.define(version: 2021_01_13_041956) do
 
   create_table "access_levels", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", limit: 50
@@ -125,9 +125,6 @@ ActiveRecord::Schema.define(version: 2021_01_11_164215) do
     t.date "end_date"
     t.text "description"
     t.decimal "amount", precision: 8, scale: 2
-    t.integer "receipts", limit: 1
-    t.integer "images", limit: 1
-    t.bigint "image_id", null: false
     t.decimal "loan_amount", precision: 8, scale: 2
     t.integer "loan_paid", limit: 1
     t.decimal "interest_amount", precision: 8, scale: 2
@@ -143,7 +140,6 @@ ActiveRecord::Schema.define(version: 2021_01_11_164215) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["bid_id"], name: "index_invoices_on_bid_id"
     t.index ["company_id"], name: "index_invoices_on_company_id"
-    t.index ["image_id"], name: "index_invoices_on_image_id"
     t.index ["project_site_id"], name: "index_invoices_on_project_site_id"
     t.index ["sku_id"], name: "index_invoices_on_sku_id"
     t.index ["term_id"], name: "index_invoices_on_term_id"
@@ -238,7 +234,6 @@ ActiveRecord::Schema.define(version: 2021_01_11_164215) do
   add_foreign_key "images", "image_types"
   add_foreign_key "invoices", "bids"
   add_foreign_key "invoices", "companies"
-  add_foreign_key "invoices", "images"
   add_foreign_key "invoices", "project_sites"
   add_foreign_key "invoices", "skus"
   add_foreign_key "invoices", "terms"
